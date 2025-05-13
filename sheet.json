@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "2180cbd6-649c-4216-b195-71e6cf297389",
+		"name": "Excel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31892948"
+	},
+	"item": [
+		{
+			"name": "Export File  For Orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "216|swRcqPfkD8yNQTMviCbUDhGpaZvZvjonfHlC0vKv7f4ead96",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{local}}user/order/export",
+					"host": [
+						"{{local}}user"
+					],
+					"path": [
+						"order",
+						"export"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import File  For orders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "221|hBOvhFT3dYJZPQbCyvEvuwjElP6oC1XPdkNKN7e85c8356b0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "msahmed355@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "01144431205",
+							"type": "text"
+						},
+						{
+							"key": "country",
+							"value": "egypt",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "cairo",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "new cairo",
+							"type": "text"
+						},
+						{
+							"key": "purpose",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "car_desc",
+							"value": "1,2",
+							"type": "text"
+						},
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/home/faisal/Desktop/orders (1).xlsx"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}user/order/import",
+					"host": [
+						"{{local}}user"
+					],
+					"path": [
+						"order",
+						"import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Import Models",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "222|7I76uAUgU7R3Vaa19TLmkqfZ54Xlf791Z7hh1Es233204f02",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}carModels/import",
+					"host": [
+						"{{local}}carModels"
+					],
+					"path": [
+						"import"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Orders Filter By Date",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "223|K45b4lx75LHLFtpj0SsBD3BLXD9qMDH8I6D7ZAAQd47d69a0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "startDate",
+							"value": "2024-02-11 ",
+							"type": "text"
+						},
+						{
+							"key": "endDate",
+							"value": "2024-09-11 ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{local}}order/date_filter",
+					"host": [
+						"{{local}}order"
+					],
+					"path": [
+						"date_filter"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,6586 @@
+{
+	"info": {
+		"_postman_id": "f6c10688-47b8-4f0c-a9c9-5e79e7a95cc3",
+		"name": "Final Soomha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21535263"
+	},
+	"item": [
+		{
+			"name": "Admin",
+			"item": [
+				{
+					"name": "ads - الاعلانات",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "get all ads",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "VkjdTu2ihufafxOPz1HL7kjuFbKONaWBl26eViBV25eb5d48",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "lang",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/ad/index/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"ad",
+												"index",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get all ads by position",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/ad/getAll",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"ad",
+												"getAll"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "change ad status",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/ad/change/{id}/{status}",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"ad",
+												"change",
+												"{id}",
+												"{status}"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/ad/remove/{id}",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"ad",
+												"remove",
+												"{id}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "store",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "type",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"type": "file",
+													"src": []
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/ad/store",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"ad",
+												"store"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "content",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "type",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/ad/update/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"ad",
+												"update",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "اعلانات الموقع سواء في صفحه الهووم او في صفحات اخري ويتم تقسيمها عن\n\nطريق ال type ويحمل قيمه ارقام تدل ع الصفحه التي يتواجد بها هذا الاعلان\n\ntype => مكان الاعلان خمس اماكن فقط 1-2-3\n\n4=> اعللانات خدماتنا\n\n5=>اعلانات سومها للارقام\n\nImage => صوره الاعلان"
+				},
+				{
+					"name": "Services الخدمات",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "get all Services",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/services/getAll/",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"services",
+												"getAll",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "change services status",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/services/change/1/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"services",
+												"change",
+												"1",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/services/remove/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"services",
+												"remove",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "store",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "خدمه جديده",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "new service",
+													"type": "text"
+												},
+												{
+													"key": "content_ar",
+													"value": "خدمه جديده خدمه جديده",
+													"type": "text"
+												},
+												{
+													"key": "content_en",
+													"value": "new service new service",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/services/store",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"services",
+												"store"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "lang",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "خدمه جديده11",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "new service11",
+													"type": "text"
+												},
+												{
+													"key": "content_ar",
+													"value": "خدمه جديده خدمه جديده11",
+													"type": "text"
+												},
+												{
+													"key": "content_en",
+													"value": "new service new service11",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/services/update/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"services",
+												"update",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "الخدمات التي يقدمها الموقع سواء اشخاص او بنوك او شركات\n\ntitle_ar => عنوان الخدمه string\n\ntitle_en => عنوان الخدمه الانجلش string\n\ncontent_ar=> تفاصيل الخدمه text\n\ncontent_en => تفاصيل الخدمه بالانجلش text\n\nstatus => not required => حاله الخدمه متاحه ام لا 0,1\n\nimage=> صوره الخدمه image"
+				},
+				{
+					"name": "news  الاخبار والاحداث",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "get all news",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/new/getAll/",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"new",
+												"getAll",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get news by its id",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "lang",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/website/news/show/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"website",
+												"news",
+												"show",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "change news status [ id/status]",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/new/change/1/0",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"new",
+												"change",
+												"1",
+												"0"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/new/remove/3",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"new",
+												"remove",
+												"3"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "store",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "lang",
+												"value": "ar",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "خبر جديد 22",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "new news22",
+													"type": "text"
+												},
+												{
+													"key": "content_ar",
+													"value": "خبر جديدخبر جديدخبر جديدخبر جديد 22",
+													"type": "text"
+												},
+												{
+													"key": "content_en",
+													"value": "new newsnew newsnew newsnew news22",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"type": "file",
+													"src": "postman-cloud:///1ef2330e-55b6-4830-baf5-7eb5b15a4b3d"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/new/store",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"new",
+												"store"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "content_ar",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "content_en",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/new/update/{id}",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"new",
+												"update",
+												"{id}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "الاخبار والاحداث التي يعرضها الموقع ع حسب نوع المستخدم\n\ntitle_ar => عنوان الخبر string\n\ntitle_en=>عنوان بالانجلش string\n\ncontent_ar=> تفاصيل الخبر text\n\ncontent_en=> تفاصيل بالانجلش text\n\nstatus => حاله الخبر متاج او غير متاج للعرض number \\[not required\\] 0,1\n\nimage=> صوره الخبر image \\[png,jpeg\\]"
+				},
+				{
+					"name": "الاشتراكات",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "جميع الباقات",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/sub/getAll/",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"sub",
+												"getAll",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "تفاصيل الباقه",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "lang",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/sub/show/14",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"sub",
+												"show",
+												"14"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "حذف الباقه",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/sub/remove/13",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"sub",
+												"remove",
+												"13"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "اضافه باقه جديده",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "lang",
+												"value": "ar",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "اشتراك جديد ",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "new subscribe",
+													"type": "text"
+												},
+												{
+													"key": "details_ar",
+													"value": "اشتراك جديد اشتراك جديد اشتراك جديد اشتراك جديد ",
+													"type": "text"
+												},
+												{
+													"key": "details_en",
+													"value": "new subscribe new subscribe new subscribe new subscribe ",
+													"type": "text"
+												},
+												{
+													"key": "orders",
+													"value": "50",
+													"type": "text"
+												},
+												{
+													"key": "price",
+													"value": "120",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/sub/store",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"sub",
+												"store"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "تعديل الباقه",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "اشتراك جديد ",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "new subscribe",
+													"type": "text"
+												},
+												{
+													"key": "details_ar",
+													"value": "اشتراك جديد اشتراك جديد اشتراك جديد اشتراك جديد ",
+													"type": "text"
+												},
+												{
+													"key": "details_en",
+													"value": "new subscribe new subscribe new subscribe new subscribe ",
+													"type": "text"
+												},
+												{
+													"key": "orders",
+													"value": "100",
+													"type": "text"
+												},
+												{
+													"key": "price",
+													"value": "120",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/sub/update/14",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"sub",
+												"update",
+												"14"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "باقات تتاح للمستخدمين للاشتراك بها\n\ntitle_ar => عنوان الخبر string\n\ntitle_en=>عنوان بالانجلش string\n\ndetails_ar=> تفاصيل الخبر text\n\ndetails_en=> تفاصيل بالانجلش text\n\norders => عدد مرات التقييم\n\nprice => سعر الاشتراك\n\nnum_of_use => عدد مرات تم استخدامه"
+				},
+				{
+					"name": "coupons اكواد الخصم",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "جميع الكوبونات",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/coupon/getAll/",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"coupon",
+												"getAll",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "تفاصيل الكوبون",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "lang",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/coupon/show/13",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"coupon",
+												"show",
+												"13"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "حذف الكوبون",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/coupon/remove/13",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"coupon",
+												"remove",
+												"13"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "اضافه كوبون جديد",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "lang",
+												"value": "ar",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "كوبون جديد",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "title_en",
+													"value": "new coupon",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "code",
+													"value": "km5554",
+													"type": "text"
+												},
+												{
+													"key": "discount",
+													"value": "200",
+													"type": "text"
+												},
+												{
+													"key": "percent",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "num_of_use",
+													"value": "25",
+													"type": "text"
+												},
+												{
+													"key": "expire_at",
+													"value": "2024-12-12",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/coupon/store",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"coupon",
+												"store"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "تعديل الكوبون",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "كوبون جديد",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "new coupon",
+													"type": "text"
+												},
+												{
+													"key": "code",
+													"value": "km5554",
+													"type": "text"
+												},
+												{
+													"key": "discount",
+													"value": "200",
+													"type": "text"
+												},
+												{
+													"key": "percent",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "num_of_use",
+													"value": "25",
+													"type": "text"
+												},
+												{
+													"key": "expire_at",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/coupon/update/13",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"coupon",
+												"update",
+												"13"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "استخدام الكوبون",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "lang",
+												"value": "ar",
+												"type": "text"
+											},
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "coupon",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "user_id",
+													"value": "",
+													"type": "text"
+												},
+												{
+													"key": "order_id",
+													"value": "",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/user/coupon/submit",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"user",
+												"coupon",
+												"submit"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "اكواد خصم علي سعر التقييم سواء للمستخدمين الافراد او الشركات والبنوك\n\ntitle_ar => عنوان الخبر string\n\ntitle_en=>عنوان بالانجلش string\n\ncode => كود الخصم\n\ndiscount => الخصم في سعر التقييم الكلي\n\npercent => 0=> الخصم سيكون قيمه\n\n1=> الخصم سيكون نسبه و\n\nnum_of_use => العدد الاقصي للاستخدام\n\nexpire_at => تاريخ الانتهاء"
+				},
+				{
+					"name": "الاقسام sections",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "get all sections",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eQ5T3nFgkR7ydvqq9zFckmAASZ7PyE2nlYV2SEi78167be8a",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/section/getAll/",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"section",
+												"getAll",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get section by type",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/section/get/2",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"section",
+												"get",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/section/remove/3",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"section",
+												"remove",
+												"3"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "store",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "type",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "title_ar",
+													"value": "قسم جديد ",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "new sections",
+													"type": "text"
+												},
+												{
+													"key": "content_ar",
+													"value": "قسم جديد قسم جديد قسم جديد قسم جديد ",
+													"type": "text"
+												},
+												{
+													"key": "content_en",
+													"value": "new sectionsnew sectionsnew sectionsnew sectionsnew sections",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/section/store",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"section",
+												"store"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "images",
+							"item": [
+								{
+									"name": "get all images",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eQ5T3nFgkR7ydvqq9zFckmAASZ7PyE2nlYV2SEi78167be8a",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/section/images/getAll/",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"section",
+												"images",
+												"getAll",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "store",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "images",
+													"type": "file",
+													"src": "5FcHuqoZl/Mercedes_Logo_19 (1).jpg"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/section/images/store",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"section",
+												"images",
+												"store"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/section/images/remove/4",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"section",
+												"images",
+												"remove",
+												"4"
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"description": "صور الصغيره بيتم عرضها\n\nimages=> one image \\[required \\]"
+						}
+					],
+					"description": "الاقسام التي يعرضها الموقع ع حسب نوع المستخدم\n\ntitle_ar => عنوان القسم string\n\ntitle_en=>عنوان بالانجلش string\n\ncontent_ar=> تفاصيل القسم text\n\ncontent_en=> تفاصيل بالانجلش text\n\ntype => 1->5\n\n1=> القسم الاول , 2= القسم التاني , 3= القسم التالت , 4 = خدماتنا , 5 = سومها بالارقام"
+				},
+				{
+					"name": "question الاسئله الشائعه",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "index",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "VkjdTu2ihufafxOPz1HL7kjuFbKONaWBl26eViBV25eb5d48",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "lang",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/questions/all",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"questions",
+												"all"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get by id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "flQfhbw6A4Gh4oiSBZjPnZloLYEAZZuJjJXiQ1oi319ec612",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/questions/show/6",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"questions",
+												"show",
+												"6"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/questions/destroy/{id}",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"questions",
+												"destroy",
+												"{id}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "store",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "سؤال 12",
+													"type": "text"
+												},
+												{
+													"key": "answer_ar",
+													"value": "جواب122",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "title_en",
+													"value": "what is soomha22",
+													"type": "text"
+												},
+												{
+													"key": "answer_en",
+													"value": "it's a website to value used cars1222",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/questions/store",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"questions",
+												"store"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "ماهي سومها",
+													"type": "text"
+												},
+												{
+													"key": "answer_ar",
+													"value": "موقع لتقييم السيارات",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "what is soomha",
+													"type": "text"
+												},
+												{
+													"key": "answer_en",
+													"value": "it's a website to value used cars",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/questions/update/13",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"questions",
+												"update",
+												"13"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "الاسئله الشائعه التي يعرضها الموقع\n\ntitle_ar => عنوان السؤال string\n\ntitle_en => عنوان السؤال string\n\nanswer_ar=> اجابه السؤال text\n\nanswer_en=> اجابه السؤال text"
+				},
+				{
+					"name": "Users  المستخدمين",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "get by id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/user/show/15",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"user",
+												"show",
+												"15"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get by type",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/user/get/2",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"user",
+												"get",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "disable user",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": false
+									},
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/user/status/1/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"user",
+												"status",
+												"1",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/user/delete/{id}",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"user",
+												"delete",
+												"{id}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "create",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "bIXtAs8udpEVX8LlxBw36mFW4fYSzkINLOL3K3aT043dab4e",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "nour",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "nour@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "12341234",
+													"type": "text"
+												},
+												{
+													"key": "roles[0]]['role_id']",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "roles[1]]['role_id']",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "roles[2]]['role_id']",
+													"value": "3",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/user/create/",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"user",
+												"create",
+												""
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "tEm4yo83k7cERdvlbKcjcWNhgglAALCxy3pZnXu3713727e9",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "mahmoud",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "mahmoud@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "password",
+													"value": "12341234",
+													"type": "text"
+												},
+												{
+													"key": "roles[0]]['role_id']",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "roles[1]]['role_id']",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "roles[2]]['role_id']",
+													"value": "3",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/user/update/13",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"user",
+												"update",
+												"13"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "المستخدمين \\[ ادمن - مستخدم عادي - بنك - شركه \\]\n\nname: الاسم  \ntype: admin =>1 , 2=>user , 3=> bank , 4=>company\\] نوع المستخدم"
+				},
+				{
+					"name": "Contact us   اتصل بناااا",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "get All",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eQ5T3nFgkR7ydvqq9zFckmAASZ7PyE2nlYV2SEi78167be8a",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/contact/getAll",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"contact",
+												"getAll"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/contact/destroy/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"contact",
+												"destroy",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "update",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "reply",
+													"value": "reply done",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/contact/update/11",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"contact",
+												"update",
+												"11"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "خدمه اتصل بنا للتواصل مع الاداره\n\nname: اسم المستخدم  \nemail: البريد الالكتروني  \ntopic: موضوع الرساله  \nmessage: نص الرساله  \nreply: رد الادمن ع الاستفسار"
+				},
+				{
+					"name": "States  الاحصائيات",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "index",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/state/index",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"state",
+												"index"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get by id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/state/show/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"state",
+												"show",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}{/state/destroy/{id}",
+											"host": [
+												"{{$url}}{"
+											],
+											"path": [
+												"state",
+												"destroy",
+												"{id}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "store",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "عدد الزوار",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "visitors",
+													"type": "text"
+												},
+												{
+													"key": "content_ar",
+													"value": "7500 زائر",
+													"type": "text"
+												},
+												{
+													"key": "content_en",
+													"value": "7500 person",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/state/store",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"state",
+												"store"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "عدد الزوار",
+													"type": "text"
+												},
+												{
+													"key": "content_ar",
+													"value": "7500 زائر",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "visitors",
+													"type": "text"
+												},
+												{
+													"key": "content_en",
+													"value": "7500 person",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/state/update/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"state",
+												"update",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "title_ar : اسم الاحصائيه\n\ntitle_en: اسم الاحصائيه بالانجلش\n\ncontent_ar: رقم بالعربي\n\ncontent_en: رقم بالانجلش"
+				},
+				{
+					"name": "Brands   ماركات السيارات",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "get all brands",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/brand/getAll",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"brand",
+												"getAll"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "change brands status",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/brand/change/1/0",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"brand",
+												"change",
+												"1",
+												"0"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "remove",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "VBv31KO9QzUz8LO5K4WAP6KvBfWgIn2whqa5O33x0aa20801",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/brand/destroy/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"brand",
+												"destroy",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "store",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "VBv31KO9QzUz8LO5K4WAP6KvBfWgIn2whqa5O33x0aa20801",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "براند تجربه",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "brand-test",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"type": "file",
+													"src": "postman-cloud:///1ef2330e-55b6-4830-baf5-7eb5b15a4b3d"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/brand/store",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"brand",
+												"store"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "VBv31KO9QzUz8LO5K4WAP6KvBfWgIn2whqa5O33x0aa20801",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "مرسيدس",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "Mercedes",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"type": "file",
+													"src": "_EbR2SlKX/Mercedes_Logo_19.jpg"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/brand/update/3",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"brand",
+												"update",
+												"3"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "ماركه السياره هي الشركه التابعه لها السياره\n\ntitle_ar , title_en => اسم الماركه باللغتين\n\nimage = > صوره الماركه"
+				},
+				{
+					"name": "Car Description   وصف السياره",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "delete",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/carDesc/destroy/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"carDesc",
+												"destroy",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "store",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "ماتور",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "motor",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/carDesc/store",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"carDesc",
+												"store"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title_ar",
+													"value": "ماتور",
+													"type": "text"
+												},
+												{
+													"key": "title_en",
+													"value": "motor",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/carDesc/update/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"carDesc",
+												"update",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "وصف السياره و بعض ال option بداخلها\n\ntitle_ar, title_en \\[type string \\]"
+				},
+				{
+					"name": "Car Model   موديلات السيارات",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "get All",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "VBv31KO9QzUz8LO5K4WAP6KvBfWgIn2whqa5O33x0aa20801",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/models/getAll?page=2",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"models",
+												"getAll"
+											],
+											"query": [
+												{
+													"key": "page",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}{/models/destroy/{id}",
+											"host": [
+												"{{$url}}{"
+											],
+											"path": [
+												"models",
+												"destroy",
+												"{id}"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "store",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "VBv31KO9QzUz8LO5K4WAP6KvBfWgIn2whqa5O33x0aa20801",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [
+											{
+												"key": "lang",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name_ar",
+													"value": "موديل تجربه 2",
+													"type": "text"
+												},
+												{
+													"key": "name_en",
+													"value": "Model Test 2",
+													"type": "text"
+												},
+												{
+													"key": "brand_id",
+													"value": "68",
+													"type": "text"
+												},
+												{
+													"key": "damage_pieces_price",
+													"value": "600",
+													"type": "text"
+												},
+												{
+													"key": "year_made",
+													"value": "2020",
+													"type": "text"
+												},
+												{
+													"key": "motor",
+													"value": "0.25",
+													"type": "text"
+												},
+												{
+													"key": "gearbox",
+													"value": "0.25",
+													"type": "text"
+												},
+												{
+													"key": "kilo[0][fromKM]",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "kilo[0][toKM]",
+													"value": "10000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[0][price]",
+													"value": "20",
+													"type": "text"
+												},
+												{
+													"key": "kilo[1][fromKM]",
+													"value": "10001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[1][toKM]",
+													"value": "20000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[1][price]",
+													"value": "30",
+													"type": "text"
+												},
+												{
+													"key": "kilo[2][fromKM]",
+													"value": "20001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[2][toKM]",
+													"value": "40000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[2][price]",
+													"value": "40",
+													"type": "text"
+												},
+												{
+													"key": "kilo[3][fromKM]",
+													"value": "40001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[3][toKM]",
+													"value": "60000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[3][price]",
+													"value": "50",
+													"type": "text"
+												},
+												{
+													"key": "kilo[4][fromKM]",
+													"value": "60001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[4][toKM]",
+													"value": "80000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[4][price]",
+													"value": "50",
+													"type": "text"
+												},
+												{
+													"key": "kilo[5][fromKM]",
+													"value": "80001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[5][toKM]",
+													"value": "100000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[5][price]",
+													"value": "60",
+													"type": "text"
+												},
+												{
+													"key": "kilo[6][fromKM]",
+													"value": "100001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[6][toKM]",
+													"value": "130000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[6][price]",
+													"value": "70",
+													"type": "text"
+												},
+												{
+													"key": "kilo[7][fromKM]",
+													"value": "130001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[7][toKM]",
+													"value": "160000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[7][price]",
+													"value": "80",
+													"type": "text"
+												},
+												{
+													"key": "kilo[8][fromKM]",
+													"value": "160001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[8][toKM]",
+													"value": "200000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[8][price]",
+													"value": "90",
+													"type": "text"
+												},
+												{
+													"key": "kilo[9][fromKM]",
+													"value": "200001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[9][toKM]",
+													"value": "250000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[9][price]",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "kilo[10][fromKM]",
+													"value": "250001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[10][toKM]",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "kilo[10][price]",
+													"value": "11",
+													"type": "text"
+												},
+												{
+													"key": "years_price[0]",
+													"value": "50",
+													"type": "text"
+												},
+												{
+													"key": "years_price[1]",
+													"value": "50",
+													"type": "text"
+												},
+												{
+													"key": "years_price[2]",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "years_price[3]",
+													"value": "50",
+													"type": "text"
+												},
+												{
+													"key": "years_price[4]",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "years_price[5]",
+													"value": "50",
+													"type": "text"
+												},
+												{
+													"key": "years_price[6]",
+													"value": "50",
+													"type": "text"
+												},
+												{
+													"key": "years_price[7]",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "years_price[8]",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "years_price[9]",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "years_price[10]",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "years_price[11]",
+													"value": "50",
+													"type": "text"
+												},
+												{
+													"key": "years_price[12]",
+													"value": "10",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/models/store",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"models",
+												"store"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "VBv31KO9QzUz8LO5K4WAP6KvBfWgIn2whqa5O33x0aa20801",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name_ar",
+													"value": "كي 14",
+													"type": "text"
+												},
+												{
+													"key": "name_en",
+													"value": "k14",
+													"type": "text"
+												},
+												{
+													"key": "brand_id",
+													"value": "4",
+													"type": "text"
+												},
+												{
+													"key": "damage_pieces_price",
+													"value": "600",
+													"type": "text"
+												},
+												{
+													"key": "year_made",
+													"value": "2020",
+													"type": "text"
+												},
+												{
+													"key": "motor",
+													"value": "0.25",
+													"type": "text"
+												},
+												{
+													"key": "gearbox",
+													"value": "0.25",
+													"type": "text"
+												},
+												{
+													"key": "kilo[0][fromKM]",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "kilo[0][toKM]",
+													"value": "10000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[0][price]",
+													"value": "1",
+													"type": "text"
+												},
+												{
+													"key": "kilo[1][fromKM]",
+													"value": "10001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[1][toKM]",
+													"value": "20000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[1][price]",
+													"value": "2",
+													"type": "text"
+												},
+												{
+													"key": "kilo[2][fromKM]",
+													"value": "20001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[2][toKM]",
+													"value": "40000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[2][price]",
+													"value": "4",
+													"type": "text"
+												},
+												{
+													"key": "kilo[3][fromKM]",
+													"value": "40001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[3][toKM]",
+													"value": "60000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[3][price]",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "kilo[4][fromKM]",
+													"value": "60001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[4][toKM]",
+													"value": "80000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[4][price]",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "kilo[5][fromKM]",
+													"value": "80001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[5][toKM]",
+													"value": "100000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[5][price]",
+													"value": "6",
+													"type": "text"
+												},
+												{
+													"key": "kilo[6][fromKM]",
+													"value": "100001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[6][toKM]",
+													"value": "130000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[6][price]",
+													"value": "7",
+													"type": "text"
+												},
+												{
+													"key": "kilo[7][fromKM]",
+													"value": "130001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[7][toKM]",
+													"value": "160000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[7][price]",
+													"value": "8",
+													"type": "text"
+												},
+												{
+													"key": "kilo[8][fromKM]",
+													"value": "160001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[8][toKM]",
+													"value": "200000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[8][price]",
+													"value": "9",
+													"type": "text"
+												},
+												{
+													"key": "kilo[9][fromKM]",
+													"value": "200001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[9][toKM]",
+													"value": "250000",
+													"type": "text"
+												},
+												{
+													"key": "kilo[9][price]",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "kilo[10][fromKM]",
+													"value": "250001",
+													"type": "text"
+												},
+												{
+													"key": "kilo[10][toKM]",
+													"value": "0",
+													"type": "text"
+												},
+												{
+													"key": "kilo[10][price]",
+													"value": "11",
+													"type": "text"
+												},
+												{
+													"key": "years_price[0]",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "years_price[1]",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "years_price[2]",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "years_price[3]",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "years_price[4]",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "years_price[5]",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "years_price[6]",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "years_price[7]",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "years_price[8]",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "years_price[9]",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "years_price[10]",
+													"value": "10",
+													"type": "text"
+												},
+												{
+													"key": "years_price[11]",
+													"value": "5",
+													"type": "text"
+												},
+												{
+													"key": "years_price[12]",
+													"value": "10",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/models/update/2",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"models",
+												"update",
+												"2"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "update brands",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "VBv31KO9QzUz8LO5K4WAP6KvBfWgIn2whqa5O33x0aa20801",
+													"type": "string"
+												}
+											]
+										},
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "damage_pieces_price",
+													"value": "800",
+													"type": "text"
+												},
+												{
+													"key": "year_made",
+													"value": "2020",
+													"type": "text"
+												},
+												{
+													"key": "motor",
+													"value": "0.26",
+													"type": "text"
+												},
+												{
+													"key": "gearbox",
+													"value": "0.26",
+													"type": "text"
+												},
+												{
+													"key": "years_price[0]",
+													"value": "60",
+													"type": "text"
+												},
+												{
+													"key": "years_price[1]",
+													"value": "60",
+													"type": "text"
+												},
+												{
+													"key": "years_price[2]",
+													"value": "10",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "years_price[3]",
+													"value": "50",
+													"type": "text"
+												},
+												{
+													"key": "years_price[4]",
+													"value": "10",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "years_price[5]",
+													"value": "50",
+													"type": "text"
+												},
+												{
+													"key": "years_price[6]",
+													"value": "50",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "years_price[7]",
+													"value": "10",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "years_price[8]",
+													"value": "5",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "years_price[9]",
+													"value": "10",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "years_price[10]",
+													"value": "10",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "years_price[11]",
+													"value": "50",
+													"type": "text",
+													"disabled": true
+												},
+												{
+													"key": "years_price[12]",
+													"value": "10",
+													"type": "text",
+													"disabled": true
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/models/updateBrandModels/68",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"models",
+												"updateBrandModels",
+												"68"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					],
+					"description": "موديلات السياره هي اصدارات السياره مثل اصدار c500 من مارسيدس وهكذا\n\nname_ar = اسم الموديل بالعربي \\[string - required \\]\n\nname_en = اسم الموديل بالانجلش \\[string - required \\]\n\nbrand_id = رقم البراند \\[number- required \\]\n\ndamage_pieces_price = سعر القطعه التي تم رشها \\[decimal - required \\] 200.00\n\nyear_made => تاريخ صناعه السياره \\[number(2020) - required \\]\n\nyears_price = اسعار العجز ف السنين سنين اصدار السياره\n\nkilo =>array of kilo rangs\n\nmotor => نسبه خصم عند تغيير الماتور\n\ngearbox=> نسبه خصم الجيركس;"
+				},
+				{
+					"name": "Orders طلبات تقييم السيارات",
+					"item": [
+						{
+							"name": "get all orders",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/order/getAllOrders",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"order",
+										"getAllOrders"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "order filter",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "startDate",
+											"value": "1/1/2024",
+											"type": "text"
+										},
+										{
+											"key": "endDate",
+											"value": "9/9/2024",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/order/date_filter",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"order",
+										"date_filter"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get order by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/order/get/411",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"order",
+										"get",
+										"411"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get orders of user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/order/user/7",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"order",
+										"user",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete order",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/order/destroy/{order_id}",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"order",
+										"destroy",
+										"{order_id}"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "عمل طلب للتقييم سواء كان مستخدم عادي او بنك او شركه\n\nOrder:\n\nuser_id: رقم المستخدم  \nbrand_id: رقم البراند  \nmodel_id: رقم الموديل\n\npurpose: \\[1=>3\\] غرض التقييم  \ndamage_pieces: عدد القطع المتضرره  \nmade_year: سنه الصنع  \ncar_case: حاله السياره  \ncurrent_price: سعر السياره الان  \nkilos: عدد الكيلوهات اللي مشتهم السياره\n\nfile:ملف السيارت لو بنك ولابد ان يكون نوع الملف اكسل\n\n_ORDER DETAILS :_\n\ntype:\\[1=>user,2=>bank,3=>comp\\] نوع التقييم\n\n\\=========================================================\n\nبيانات مشتركه في كل انواع الاشخاص الذين يقومون بالتقييم\n\nemail: البريد الالكتروني  \nphone: الموبايل  \ncountry: الدوله  \ncity:المدينه  \naddress:العنوان\n\npurpose: الغرض من التقييم وبتكون قيمتها ارقام من 1 - 3\n\n1=> معرفه قيمه السياره\n\n2=> بيع السياره\n\n3=> اغراض تجاريه\n\n\\=======================================================\n\nبيانات في حاله لو كان شركه او بنك\n\ntitle: نوع النشاط لو في حاله كان المستخدم شركه\n\nperson: الشخص المسؤل\n\nperson_title: المسمي الوظيفي لهذا الشخص  \npostal: رقم البريد\n\npostal_code: كود البريد"
+				},
+				{
+					"name": "Content  اداره محتوي",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/contents",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"contents"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "socials",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "en",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$url}}/website/content/socials",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"content",
+										"socials"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show by id",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/contents/show/1",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"contents",
+										"show",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create new content",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "social",
+											"value": "linkedin",
+											"type": "text"
+										},
+										{
+											"key": "link",
+											"value": "www.linkedin.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/contents/store/",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"contents",
+										"store",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "social",
+											"value": "snapchat",
+											"type": "text"
+										},
+										{
+											"key": "link",
+											"value": "www.snapchat.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/contents/update/6",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"contents",
+										"update",
+										"6"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/contents/destroy/4",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"contents",
+										"destroy",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "لينكات التواصل الاجتماعي\n\nsocila: ex: عنوان المحتوي string\n\nlinl: ex: ... تفاصيل المحتوي link"
+				},
+				{
+					"name": "Roles الصلاحيات",
+					"item": [
+						{
+							"name": "get all roles",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "fwZRNmTjcNzfzvI8vTFaA8j0ewItceZf2ELfV2NI40835017",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$url}}/roles/index",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"roles",
+										"index"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "complains الشكاوي",
+					"item": [
+						{
+							"name": "كل الشكاوي",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eQ5T3nFgkR7ydvqq9zFckmAASZ7PyE2nlYV2SEi78167be8a",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$url}}/complians/index/",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"complians",
+										"index",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update complains",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "ebW0uffVuGLU7xdRaB2qIWxZJA3hiVcnyevkCXLU598faf2b",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "reply",
+											"value": "سوف يتم الرد قريبا",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/complians/update/7",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"complians",
+										"update",
+										"7"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "حذف شكوي",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$url}}/complians/destroy/1",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"complians",
+										"destroy",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "الشكاوي\n\nstatus : 0=> لاتظهر ف الموقع\n\n1=> تظهر ف الموقع"
+				},
+				{
+					"name": "لاعلانتكم",
+					"item": [
+						{
+							"name": "لاعلانتكم",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$url}}/advertises/index/",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"advertises",
+										"index",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "حذف طلب اعلان",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$url}}/advertises/destroy/1",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"advertises",
+										"destroy",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "الاعلانات"
+				},
+				{
+					"name": "Settings",
+					"item": [
+						{
+							"name": "change settings",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "madi@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "commission",
+											"value": "10.00",
+											"type": "text"
+										},
+										{
+											"key": "tax",
+											"value": "15",
+											"type": "text"
+										},
+										{
+											"key": "aboutus_ar",
+											"value": "سومها هو موقع ل تقييم السيارات سواء للأفراد او للشركات او للبنوك, سومها هو موقع ل تقييم السيارات سواء للأفراد او للشركات او للبنوك, سومها هو موقع ل تقييم السيارات سواء للأفراد او للشركات او للبنوك, سومها هو موقع ل تقييم السيارات سواء للأفراد او للشركات.",
+											"type": "text"
+										},
+										{
+											"key": "aboutus_en",
+											"value": "soomha is a website to evaluate cars, soomha is a website to evaluate cars,soomha is a website to evaluate cars.",
+											"type": "text"
+										},
+										{
+											"key": "terms_ar",
+											"value": "الشروط والاحكام , الشروط والشروط والاحكام , الشروط والاحكام , الشروط والاحكام , الشروط والاحكام , الشروط والاحكام , الاحكام , الشروط والاحكام , الشروط والاحكام , ",
+											"type": "text"
+										},
+										{
+											"key": "terms_en",
+											"value": "terms & conditions ,terms & conditions ,terms & conditions ,terms & conditions ,terms & conditions ,terms & conditions ,terms & conditions .",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/settings/store/",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"settings",
+										"store",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "index",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/settings",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"settings"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "اعدادات الموقع\n\ncommisson => عموله التقييم\n\ntax => الضريبه\n\nemail => البريد االالكتروني"
+				},
+				{
+					"name": "Rates  تقييم الموقع",
+					"item": [
+						{
+							"name": "get all rates",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{$url}}/rate/",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"rate",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change status",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{$url}}/rate/status/4/1",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"rate",
+										"status",
+										"4",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete rate",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "PJilNWE2y6Xk7rmSce0jHGdx8BWQFLjt2hPp9xwL3fd0cf1c",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{$url}}/rate/destroy/6",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"rate",
+										"destroy",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Website  الموقع",
+			"item": [
+				{
+					"name": "ads",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "get ads by position",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/website/ads/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"website",
+												"ads",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get by id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/website/ads/show/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"website",
+												"ads",
+												"show",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Offers",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "get all offers by type",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "lang",
+												"value": "ar",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/website/offers/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"website",
+												"offers",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get offers by id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/website/offers/show/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"website",
+												"offers",
+												"show",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Contact us",
+					"item": [
+						{
+							"name": "POST",
+							"item": [
+								{
+									"name": "Create Contact",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "name",
+													"value": "mohamed",
+													"type": "text"
+												},
+												{
+													"key": "email",
+													"value": "mo@gmail.com",
+													"type": "text"
+												},
+												{
+													"key": "topic",
+													"value": "testing",
+													"type": "text"
+												},
+												{
+													"key": "message",
+													"value": "my new message ",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{$url}}/website/contact/store",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"website",
+												"contact",
+												"store"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "States",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "index",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/website/states/",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"website",
+												"states",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Brands",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "get all brands",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/website/brands",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"website",
+												"brands"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get by id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/website/brands/show/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"website",
+												"brands",
+												"show",
+												"1"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Car Description",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "Get All Car Description",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/website/carDesc/",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"website",
+												"carDesc",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Car Model",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "get model by brand id",
+									"request": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{$url}}/website/models/4",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"website",
+												"models",
+												"4"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "show",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/website/models/show/400",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"website",
+												"models",
+												"show",
+												"400"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Content",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/website/content",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"content"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "about_us",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/website/content/about_us",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"content",
+										"about_us"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "terms",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "en",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$url}}/website/content/terms",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"content",
+										"terms"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "socials",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept-Language",
+										"value": "en",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$url}}/website/content/socials",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"content",
+										"socials"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "newss",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/website/news",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"news"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show by key",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/website/news/show/1",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"news",
+										"show",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "questions",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/website/question",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"question"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/website/question/show/6",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"question",
+										"show",
+										"6"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Services",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/website/service",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"service"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show by id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/website/service/show/1",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"service",
+										"show",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Rates  تقييم الموقع من جهه العملاء Copy",
+					"item": [
+						{
+							"name": "عدد التقييمات ع حسب عدد النجوم",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{$url}}/website/rate/get/4",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"rate",
+										"get",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get all rates",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{$url}}/website/rate/",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"rate",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "نسب التقييمات كلها",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{$url}}/website/rate/show",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"rate",
+										"show"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "sections",
+					"item": [
+						{
+							"name": "images",
+							"item": [
+								{
+									"name": "get all images",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "eQ5T3nFgkR7ydvqq9zFckmAASZ7PyE2nlYV2SEi78167be8a",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept-Language",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/website/sections/images/getAll/",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"website",
+												"sections",
+												"images",
+												"getAll",
+												""
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"description": "صور الصغيره بيتم عرضها\n\nimages=> one image \\[required \\]"
+						},
+						{
+							"name": "get section by type",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/website/sections/get/1",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"website",
+										"sections",
+										"get",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "complains الشكاوي",
+					"item": [
+						{
+							"name": "كل الشكاوي",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eQ5T3nFgkR7ydvqq9zFckmAASZ7PyE2nlYV2SEi78167be8a",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$url}}/user/complains/getAll/",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"complains",
+										"getAll",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get by user id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$url}}/user/complains/getByUser/1",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"complains",
+										"getByUser",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "make new complains",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": false
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "ebW0uffVuGLU7xdRaB2qIWxZJA3hiVcnyevkCXLU598faf2b",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "kaream",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "cvzxvxcvxv",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "kaream@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/user/complains/store",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"complains",
+										"store"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "الشكاوي"
+				},
+				{
+					"name": "لاعلانتكم",
+					"item": [
+						{
+							"name": "لاعلانتكم",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eQ5T3nFgkR7ydvqq9zFckmAASZ7PyE2nlYV2SEi78167be8a",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$url}}/user/advertise/getAll/",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"advertise",
+										"getAll",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get by user id",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$url}}/user/advertise/getByUser/1",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"advertise",
+										"getByUser",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "حذف طلب اعلان",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$url}}/user/advertise/destroy/1",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"advertise",
+										"destroy",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "make new advertise",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": false
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "company",
+											"value": "trade comp",
+											"type": "text"
+										},
+										{
+											"key": "manager",
+											"value": "ibrahim",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "trading",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "tr@g.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "45465454",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "cairo",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/user/advertise/store",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"advertise",
+										"store"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "الشكاوي"
+				},
+				{
+					"name": "Notification",
+					"item": [
+						{
+							"name": "get all by user_id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/user/notfication/get/{user_id}",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"notfication",
+										"get",
+										"{user_id}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get unread notification",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/user/notfication/getUnread/{user_id}",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"notfication",
+										"getUnread",
+										"{user_id}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get readed notification",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/user/notfication/getRead/{user_id}",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"notfication",
+										"getRead",
+										"{user_id}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{$url}}/user/notfication/destroy/{id}",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"notfication",
+										"destroy",
+										"{id}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Send",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "body",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/notfication/send",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"notfication",
+										"send"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "الاشعارات التي تصل للمستخدم\n\nuser_id: رقم المستخدم المرسل ايه الاشعار  \ntitle: عنوان موضوع الاشعار  \nbody: محتوي الاشعار"
+				},
+				{
+					"name": "Rates",
+					"item": [
+						{
+							"name": "Store",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qZhnwVjWMdYffuvsmip8H95Vosm53P8aoVoLW5cb56019810",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "very good",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/user/rates/create",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"rates",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "message",
+											"value": "njkdfkldfjksjklfs",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/user/rates/update/4",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"rates",
+										"update",
+										"4"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get by user id",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{$url}}/user/rates/get/1",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"rates",
+										"get",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "destroy",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{$url}}/rate/destroy/1?",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"rate",
+										"destroy",
+										"1"
+									],
+									"query": [
+										{
+											"key": "",
+											"value": null
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "تقييمات العملاء عن الخدمه المقدمه لديهم\n\nuser_id: رقم العميل الئي يقوم بالتقييم number  \ncount: عدد النجوم المختاره number  \nmessage: رساله text"
+				},
+				{
+					"name": "Order",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "get all orders by userid",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "QytT6NqTj1mG0qR0cX6qazHg5yf0J0Iw1LwxmRHW345588c8",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/user/order/user/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"user",
+												"order",
+												"user",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "get  by id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "t6zAPnksuCLWz7PyOSwpsvK0r1M79CbDo7RVpih6a331b4aa",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/user/order/get/411",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"user",
+												"order",
+												"get",
+												"411"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "ORDER FILTERS",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "qZhnwVjWMdYffuvsmip8H95Vosm53P8aoVoLW5cb56019810",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/user/order/get/1",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"user",
+												"order",
+												"get",
+												"1"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "delete order",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/user/order/destroy/7",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"user",
+												"order",
+												"destroy",
+												"7"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "عمل تقييم للسياره",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eQ5T3nFgkR7ydvqq9zFckmAASZ7PyE2nlYV2SEi78167be8a",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "ar",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "brand_id",
+											"value": "18",
+											"type": "text"
+										},
+										{
+											"key": "model_id",
+											"value": "411",
+											"type": "text"
+										},
+										{
+											"key": "damage_pieces",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "damage_places[0]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "made_year",
+											"value": "2019",
+											"type": "text"
+										},
+										{
+											"key": "car_case",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "current_price",
+											"value": "120000",
+											"type": "text"
+										},
+										{
+											"key": "kilos",
+											"value": "100000",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "myfdev1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "14545444",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "egypt",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "new cairo",
+											"type": "text"
+										},
+										{
+											"key": "purpose",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "car_desc[0]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "car_desc[1]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "motor",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "gearbox",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/user/order/create",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"order",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "عمل تقييم للسياره كشركه",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "brand_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "model_id",
+											"value": "7",
+											"type": "text"
+										},
+										{
+											"key": "damage_pieces",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "made_year",
+											"value": "2020",
+											"type": "text"
+										},
+										{
+											"key": "car_case",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "current_price",
+											"value": "120000",
+											"type": "text"
+										},
+										{
+											"key": "kilos",
+											"value": "10000",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "myfdev1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "14545444",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "egypt",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "cairo",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "new cairo",
+											"type": "text"
+										},
+										{
+											"key": "purpose",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "trade company",
+											"type": "text"
+										},
+										{
+											"key": "person",
+											"value": "ahmed",
+											"type": "text"
+										},
+										{
+											"key": "person_title",
+											"value": "manager",
+											"type": "text"
+										},
+										{
+											"key": "postal",
+											"value": "4454",
+											"type": "text"
+										},
+										{
+											"key": "postal_code",
+											"value": "87548",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/user/order/create",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"order",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "عمل تقييم للسياره كبنك",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "brand_id",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "model_id",
+											"value": "7",
+											"type": "text"
+										},
+										{
+											"key": "damage_pieces",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "made_year",
+											"value": "2020",
+											"type": "text"
+										},
+										{
+											"key": "car_case",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "current_price",
+											"value": "120000",
+											"type": "text"
+										},
+										{
+											"key": "kilos",
+											"value": "10000",
+											"type": "text"
+										},
+										{
+											"key": "file",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "myfdev1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "14545444",
+											"type": "text"
+										},
+										{
+											"key": "country",
+											"value": "egypt",
+											"type": "text"
+										},
+										{
+											"key": "city",
+											"value": "cairo",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "new cairo",
+											"type": "text"
+										},
+										{
+											"key": "purpose",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "title",
+											"value": "trade company",
+											"type": "text"
+										},
+										{
+											"key": "person",
+											"value": "ahmed",
+											"type": "text"
+										},
+										{
+											"key": "person_title",
+											"value": "manager",
+											"type": "text"
+										},
+										{
+											"key": "postal",
+											"value": "4454",
+											"type": "text"
+										},
+										{
+											"key": "postal_code",
+											"value": "87548",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/user/order/create",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"order",
+										"create"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "كل مدن السعوديه",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "QytT6NqTj1mG0qR0cX6qazHg5yf0J0Iw1LwxmRHW345588c8",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "Accept-Language",
+										"value": "en",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{$url}}/cities",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"cities"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "## Orders طلبات تقييم السيارات\n\nعمل طلب للتقييم سواء كان مستخدم عادي او بنك او شركه\n\nOrder:\n\ntype: نوع طلب التقييم 1 فرد 2 شركه 3 بنك\n\nuser_id: رقم المستخدم  \nbrand_id: رقم البراند  \nmodel_id: رقم الموديل\n\ndamage_pieces: عدد القطع المتضرره  \nmade_year: سنه الصنع  \ncar_case: حاله السياره  \ncurrent_price: سعر السياره الان  \nkilos:range of kilometers رنج عدد الكيلوهات اللي مشتها السياره\n\nmotor: هل تم التغير ف الماتور ام لا وبتاخد قيمتين صقر او واحد\n\ngearbox: هل تم التغير ف الجير بوكس ام لا وبتاخد قيمتين صقر او واحد\n\ncar_desc : مواصفات السياره\n\ndamage_places:اماكن رش السياره\n\nfile:ملف السيارت لو بنك ولابد ان يكون نوع الملف اكسل\n\n_ORDER DETAILS :_\n\ntype:\\[1=>user,2=>bank,3=>comp\\] نوع التقييم\n\n\\=========================================================\n\nبيانات مشتركه في كل انواع الاشخاص الذين يقومون بالتقييم\n\nname: الاسم\n\nemail: البريد الالكتروني  \nphone: الموبايل  \ncountry: الدوله  \ncity:المدينه  \naddress:العنوان\n\npurpose: الغرض من التقييم وبتكون قيمتها ارقام من 1 - 3\n\n1=> معرفه قيمه السياره\n\n2=> بيع السياره\n\n3=> اغراض تجاريه\n\n\\=======================================================\n\nبيانات في حاله لو كان شركه او بنك\n\ntitle: نوع النشاط لو في حاله كان المستخدم شركه\n\nperson: الشخص المسؤل\n\nperson_title: المسمي الوظيفي لهذا الشخص  \npostal: رقم البريد\n\npostal_code: كود البريد"
+				},
+				{
+					"name": "Auth",
+					"item": [
+						{
+							"name": "GET",
+							"item": [
+								{
+									"name": "get by id",
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": [
+												{
+													"key": "token",
+													"value": "ZEmQTIbJITNdoNCFlNigddnstQ5kc4xTR2ENBDoVfff1f386",
+													"type": "string"
+												}
+											]
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "lang",
+												"value": "en",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/user/auth/get/15",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"user",
+												"auth",
+												"get",
+												"15"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "change language",
+									"protocolProfileBehavior": {
+										"followOriginalHttpMethod": true
+									},
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{$url}}/auth/lang/1/ar",
+											"host": [
+												"{{$url}}"
+											],
+											"path": [
+												"auth",
+												"lang",
+												"1",
+												"ar"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Register",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "012454784545",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "myfdev1@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										},
+										{
+											"key": "c_password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/user/auth/register",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update user profile",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "IHCxSA4VxbU1Y3qQqyk3RbYWbmfVu9pbCgKwMzD6152c3cb9",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "kaream",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "phone",
+											"value": "012799344545",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "kimo@gmail.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "old_password",
+											"value": "123456",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "12341234",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "c_password",
+											"value": "12341234",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "",
+											"value": "",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/user/auth/update/3",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"auth",
+										"update",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "login",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "phone",
+											"value": "0123456789",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "email",
+											"value": "kimo@gmail.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/user/auth/login",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "send Password Reset Link",
+							"protocolProfileBehavior": {
+								"maxRedirects": 200,
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "email",
+											"value": "myfdev@gmail.com",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/user/auth/send-ResetCode",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"auth",
+										"send-ResetCode"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change password",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "code",
+											"value": "714173",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "12341234",
+											"type": "text"
+										},
+										{
+											"key": "c_password",
+											"value": "12341234",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/user/auth/change-password",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"auth",
+										"change-password"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "logout",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "mbo5ByzmPX4jwGm2capiADTKjJrP5O7ychMRse6bfb1b4165",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{$url}}/user/auth/logout",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"auth",
+										"logout"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Checkout",
+					"item": [
+						{
+							"name": "checkout",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "qZhnwVjWMdYffuvsmip8H95Vosm53P8aoVoLW5cb56019810",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "type",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "count",
+											"value": "10",
+											"type": "text"
+										},
+										{
+											"key": "coupon",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/checkout",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"checkout"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "type => 1 => individuals required\n\n2=> company\n\nuser_id => required\n\ncount => في حاله تقييم الشركات بنبعت عدد السيارات اللي بيتعملها تقييم\n\ncoupon => كود الكوبون الخاص بالخصم\n\nrest => المتبقي من الباقه"
+				},
+				{
+					"name": "اشتراكاتي",
+					"item": [
+						{
+							"name": "تفعيل الاشتراك",
+							"protocolProfileBehavior": {
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "sub_id",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "user_id",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{$url}}/user/subscribe/submit",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"subscribe",
+										"submit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "جميع اشتراكاتي",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true,
+								"followOriginalHttpMethod": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "QT7PAHlWShct2Euw8sebdbJmM947vrmwnUuxLQIree35d657",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "lang",
+										"value": "ar",
+										"type": "text"
+									},
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{$url}}/user/subscribe/mypackage/1",
+									"host": [
+										"{{$url}}"
+									],
+									"path": [
+										"user",
+										"subscribe",
+										"mypackage",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"description": "sub_id => id of package\n\nuser_id => id og user\n\nrest_of_use => المتبقي من الباقه\n\ncount => عدد مرات تجديد الباقه"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "$url",
+			"value": "https://api.soomha.net/api",
+			"type": "string"
+		}
+	]
+}
