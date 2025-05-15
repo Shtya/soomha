@@ -16,6 +16,7 @@ import DropLang from '@/atoms/DropLang'
 
 const Navbar = () => {
   const t = useTranslations('navbar2' )
+  const t_alt = useTranslations('' )
   const pathname = usePathname()
   //! ref
   const ul_ref = useRef(null)
@@ -69,8 +70,8 @@ const Navbar = () => {
       <div ref={container_ref} className="container">
         
         <Link href='/' className="logo"> 
-            <Image src={Logo} alt='Logo' />
-            <span> Soomha </span>
+            <img src={"/logo.png"} alt='Logo' />
+            <span> {t_alt("footer.logo")} </span>
         </Link>
 
 
