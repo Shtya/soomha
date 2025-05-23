@@ -17,7 +17,6 @@ const page = () => {
     const lang = useTranslations('');
     const user = GetUser();
 
-
     const [notification, setnotification] = useState([]);
     const [loading, setloading] = useState(true);
 
