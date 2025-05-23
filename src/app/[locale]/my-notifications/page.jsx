@@ -16,12 +16,14 @@ const page = () => {
     const t = useTranslations('my-notifications');
     const lang = useTranslations('');
     const user = GetUser();
-    const [notification, setnotification] = useState();
+
+
+    const [notification, setnotification] = useState([]);
     const [loading, setloading] = useState(true);
 
     useEffect(
         _ => {
-            if (user) setloading(true);
+            if (user) 
             AXIOS.get('user/notfication/mylist', { headers: { Authorization: `Bearer ${user?.token}`, 'Accept-Language': lang('lang') } })
                 .then(res => {
                     setnotification(res.data?.data);
@@ -37,7 +39,6 @@ const page = () => {
     );
 
 
-    console.log(notification)
 
     return (
         <div className='people my-notifications'>
@@ -56,7 +57,7 @@ const page = () => {
                             </div>
                         ))}
                     </div>
-                ) : notification ? (
+                ) : notification?.length >= 1 ? (
                     notification.map((e, i) => (
                         <div key={i} className='bg-white mb-4 border-b pb-[10px] border-b-gray-200   transition'>
                             <div className='flex flex-col space-y-1'>
@@ -73,10 +74,10 @@ const page = () => {
                     ))
                 ) : (
                     <div className='not-found'>
-                        <Image src={notFound} alt='not found' width={200} height={200} />
+                        <Image className='w-[300px] h-[300px] flex-none object-contain ' src={notFound} alt='not found' width={200} height={200} />
                         <div className='p'>{t.raw('error')[0]}</div>
-                        <Link className='btn1' href='/'>
-                            {t.raw('error')[0]}
+                        <Link className='btn1 !w-fit !px-[40px] !mx-auto ' href='/'>
+                            {t.raw('error')[1]}
                         </Link>
                     </div>
                 )}
